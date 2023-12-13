@@ -1,0 +1,1 @@
+this was a capstone project I made back in 2022 for a small home healcare business. It takkes patient information and turns it into a JSON table. Since the whole business was using paper than transfering the data online,, I made this to speed up that process.
