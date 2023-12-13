@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Patient Form</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header>
+    <h2>Patient Form</h2>
+  </header>
+
+  <div class="right" id="logo"></div>
+
+  <form action="results.html" method="GET">
+    <!-- something about local hosting-->
+
+    <div class="dataBlock" id="patientInformation">
+
+      <div id="patientName">
+        <label for="patientName">Patient Name: </label>
+        <input type="text" name="Patient Name" id="patientNameInput" placeholder="Name" required>
+      </div>
+
+      <div id="date">
+        <label for="date">Date: </label>
+        <input type="date" name="Date" id="date" required>
+        <!--the date of the visit-->
+      </div>
+    </div>
+
+    <div class="dataBlock">
+      <h4 class="header">How much pain are you in?</h4> <!-- a slider input for much pain the patient is in-->
+
+      <div class="rangeSlider">
+
+        <p id="sliderValue">
+          <span id="slider"></span>
+        </p>
+
+        <label for="pain_mch"></label>
+        <input type="range" min="0" max="10" value="0" name="Pain Level" class="myslider" id="sliderRange" required>
+      </div>
+    </div>
+
+    <div class="dataBlock">
+
+      <h4 class="header">Blood pressure</h4> <!-- text input of blood pressure-->
+      <div>
+        <textarea name="Blood Pressure" placeholder="Enter patient's blood pressure:" required></textarea>
+      </div>
+
+    </div>
+
+    <div class="dataBlock">
+      <h4 class="header">Temperature</h4> <!-- text input for the temperature-->
+      <div>
+        <textarea name="Temperature"  placeholder="Enter patient's temperature:"required></textarea>
+      </div>
+    </div>
+
+
+    <div class="dataBlock">
+      <h4 class="header">BPM</h4>
+      <!--text input for beats per minute -->
+      <div>
+        <textarea name="BPM"  placeholder="Enter patient's heartrate: "required></textarea>
+      </div>
+    </div>
+
+
+    <div class="dataBlock">
+      <h4 class="header">Blood Oxygen Level</h4> <!-- text box input for the blood oxygen level-->
+      <div>
+        <textarea name="Blood Oxygen Level" placeholder="Enter patient's blood oxygen level:" required></textarea>
+      </div>
+    </div>
+
+
+    <div class="dataBlock">
+      <h4 class="header">Patient Visit Summary</h4>
+
+      <div>
+        <label for="summary"></label>
+        <textarea name="Visit Summary" placeholder="Enter patient's visit summary:" required></textarea>
+      </div>
+    </div>
+
+
+    <div class="dataBlock">
+      <button type="submit">Submit</button> <!-- self explanitory -->
+      <button type="reset">Reset</button>
+    </div>
+
+
+
+  </form> <!-- below is the javascript for the slider which works!-->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

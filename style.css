@@ -1,0 +1,134 @@
+
+body {
+  font-family: "Montserrat", sans-serif
+}
+
+header {
+  padding-left: 10px;
+}
+
+form * {
+  padding: 0;
+  margin: 0;
+}
+
+form {
+  margin: auto;
+  width: 50%;
+
+  padding: 10px;
+
+  border: 1px solid black;
+}
+
+.dataBlock {
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+}
+
+.dataBlock:last-of-type {
+  border-bottom: 0px solid black;
+}
+
+#patientInformation {
+  display: flex;
+}
+
+#patientName, #date {
+  flex-grow: 1;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.header {
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+
+  resize: vertical;
+  padding: 5px;
+
+  border: 1px solid black;
+}
+
+input {
+  padding: 2px;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 10%;
+  /* Full-width */
+  height: 25px;
+  /* Specified height */
+  background: #a8a8a8;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1;
+  /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: #04AA6D;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: #04AA6D;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+/* make slider and value inline */
+
+.rangeSlider {
+  display: flex;
+}
+
+#sliderValue {
+  margin: 10px;
+}
+
+
+table {
+  background-color: white;
+  margin: 5px;
+}
+
+table,td,th {
+  border: 1px solid black;
+  padding: 5px
+}

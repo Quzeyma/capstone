@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,
+       initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Results</title>
+      <link href="style.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+
+
+<body>
+
+
+      <header>
+            <h2>Patient Form</h2>
+      </header>
+
+
+      <table>
+            <tr id="names"></tr>
+            <tr id="values"></tr>
+      </table>
+
+      <div class="dataBlock">
+            <a href="./index.html"><button class="tabButtons" href="index.html">Back to Form</button></a>
+            <button class="tabButtons" onclick="createCSVFile()" href="index.html">Export</button>
+      </div>
+
+
+      <script>
+            const namesRow = document.getElementById('names'); // table element 'names'
+            const valuesRow = document.getElementById('values'); // table element 'values'
+
+            // array for csv file
+            const namesArr = []; // array for names
+            const valuesArr = []; // array for values
+
+            new URLSearchParams(window.location.search).forEach((value,
+                  name) => {
+                  // create table elements
+                  th = document.createElement("th");
+                  td = document.createElement("td");
+
+                  // create text node containing name/value
+                  nameOfColumn = document.createTextNode(name);
+                  valueOfColumn = document.createTextNode(value);
+
+                  // add to table element
+                  th.appendChild(nameOfColumn);
+                  td.appendChild(valueOfColumn);
+
+                  // add to table
+                  valuesRow.appendChild(td);
+                  namesRow.appendChild(th);
+                  
+                  // add to array
+                  valuesArr.push(value);
+                  namesArr.push(name);
+            });
+
+            // make csv file
+
+            const rows = [
+                  namesArr,
+                  valuesArr
+            ];
+
+            console.log(JSON.stringify(rows));
+
+            let csvContent = "data:text/csv;charset=utf-8,"
+                  + rows.map(e => e.join(",")).join("\n");
+
+
+            // function for button click
+
+            function createCSVFile(){
+                  var encodedUri = encodeURI(csvContent);
+                  window.open(encodedUri);
+            }
+
+      </script>
+</body>
+
+</html>
